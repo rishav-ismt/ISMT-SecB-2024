@@ -16,10 +16,14 @@ class DashboardActivity : AppCompatActivity() {
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val receivedEmail = intent.getStringExtra(Constants.ENTERED_EMAIL)
+        val receivedEmail = intent
+            .getStringExtra(Constants.ENTERED_EMAIL)
+
+        val receivedTest = intent
+            .getParcelableExtra<Test>(Constants.KEY_TEST_OBJECT)
         Toast.makeText(
             this@DashboardActivity,
-            "Received Email: ".plus(receivedEmail),
+            "Received Test Variable1: ".plus(receivedTest?.variable1),
             Toast.LENGTH_SHORT
         ).show()
     }

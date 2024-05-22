@@ -1,7 +1,11 @@
 package np.edu.ismt.ismt_2024_secb
 
-class Test {
-    fun sum(a: Int, b: Int) {
-        val sum = a + b
-    }
-}
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+import java.io.Serializable
+
+@Parcelize
+data class Test(
+    val variable1: String,
+    val variable2: Int
+): Parcelable
