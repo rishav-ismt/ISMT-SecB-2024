@@ -6,10 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import np.edu.ismt.ismt_2024_secb.dashboard.DashboardActivity
 import np.edu.ismt.ismt_2024_secb.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
