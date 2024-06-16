@@ -1,11 +1,14 @@
 package np.edu.ismt.ismt_2024_secb.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import np.edu.ismt.ismt_2024_secb.R
 import np.edu.ismt.ismt_2024_secb.dashboard.adapters.RecommendationHorizontalAdapter
 import np.edu.ismt.ismt_2024_secb.databinding.FragmentHomeBinding
@@ -25,13 +28,20 @@ class HomeFragment : Fragment() {
            container,
            false
        )
+        loadRecommendations()
+        loadAddItemPage()
+        return binding.root
+    }
 
+    private fun loadRecommendations() {
         //load recycler view
         val adapter = RecommendationHorizontalAdapter(getProductsForRecommendation())
-
-        binding.rvRecommendations.layoutManager = LinearLayoutManager(requireActivity())
+        binding.rvRecommendations.layoutManager = LinearLayoutManager(
+            requireActivity(),
+            RecyclerView.HORIZONTAL,
+            false
+        )
         binding.rvRecommendations.adapter = adapter
-        return binding.root
     }
 
 
@@ -60,5 +70,15 @@ class HomeFragment : Fragment() {
         products.add(product3)
 
         return products
+    }
+
+    private fun loadAddItemPage() {
+        binding.fabAddItem.setOnClickListener {
+            val intent = Intent(
+                requireActivity(),
+                AddOrUpdateActivity::class.java
+            )
+            startActivity(intent)
+        }
     }
 }

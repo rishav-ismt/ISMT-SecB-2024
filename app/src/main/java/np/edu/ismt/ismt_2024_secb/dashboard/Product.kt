@@ -12,7 +12,7 @@ data class Product(
     val image: String = ""
 )
 
-enum class PregnancyState{
+enum class PregnancyState {
     PRE_BIRTH, POST_BIRTH
 }
 

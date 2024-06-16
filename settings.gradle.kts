@@ -21,5 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "ISMT-2024-SecB"
 include(":app")
-include(":app2")
-include(":lib")
+//include(":app2")
+//include(":lib")
