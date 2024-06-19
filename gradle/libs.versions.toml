@@ -10,6 +10,8 @@ material = "1.10.0"
 jetbrainsKotlinJvm = "1.9.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
+roomVersion = "2.6.1"
+kspRoomVersion = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -20,9 +22,12 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+room = { group = "androidx.room", name="room-runtime", version.ref = "roomVersion"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+roomAnnotationProcessor = { id = "androidx.room:room-compiler", version.ref = "roomVersion"}
+kspRoom = { id = "androidx.room:room-compiler", version.ref = "roomVersion" }
 
